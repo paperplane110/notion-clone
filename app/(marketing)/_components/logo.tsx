@@ -16,6 +16,7 @@ export const Logo = () => {
                 height="40"
                 width="40"
                 alt="Logo"
+                className="dark:saturate-200"
             />
             <p className={cn("font-semibold", font.className)}>
                 Yotion
