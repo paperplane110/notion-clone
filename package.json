@@ -21,6 +21,7 @@
     "clsx": "^2.0.0",
     "cmdk": "^1.0.0",
     "convex": "^1.6.3",
+    "emoji-picker-react": "^4.11.1",
     "lucide-react": "^0.294.0",
     "next": "14.0.3",
     "next-themes": "^0.2.1",
