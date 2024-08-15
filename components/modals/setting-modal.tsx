@@ -21,10 +21,10 @@ export const SettingModal = () => {
             My settings
           </h2>
         </DialogHeader>
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between">
           <div className="flex flex-col gap-y-1">
             <Label>Appearance</Label>
-            <span>
+            <span className="text-xs text-muted-foreground">
               Customize how Yotion looks on your device
             </span>
           </div>
