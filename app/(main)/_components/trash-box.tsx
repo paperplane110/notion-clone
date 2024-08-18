@@ -35,6 +35,7 @@ export const TrashBox = () => {
   ) => {
     event.stopPropagation()
     const promise = restore({ id: documentId })
+      .then(() => router.push(`/documents/${documentId}`))
     toast.promise(promise, {
       loading: "Restoring note...",
       success: "Note restored!",

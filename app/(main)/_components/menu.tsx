@@ -36,8 +36,6 @@ export const Menu = ({
       success: "Note moved to trash!",
       error: "Failed to archive."
     })
-
-    router.push("/documents")
   }
 
   return (

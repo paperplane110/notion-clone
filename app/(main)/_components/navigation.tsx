@@ -16,11 +16,13 @@ import { TrashBox } from "./trash-box"
 import { useSearch } from "@/hooks/use-search"
 import { useSetting } from "@/hooks/use-settings"
 import { Navbar } from "./navbar"
+import { useRouter } from "next/navigation"
 
 
 export const Navigation = () => {
   const pathname = usePathname()
   const params = useParams()
+  const router = useRouter()
   const isMobile = useMediaQuery("(max-width: 768px)")
   const create = useMutation(api.documents.create)
 
@@ -103,6 +105,9 @@ export const Navigation = () => {
 
   const handleCreate = () => {
     const promise = create({ title: "Untitled " })
+      .then((document) => {
+        router.push(`/documents/${document}`)
+      })
 
     toast.promise(promise, {
       loading: "Creating a new note...",
