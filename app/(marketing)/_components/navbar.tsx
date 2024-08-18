@@ -26,14 +26,14 @@ export const Navbar = () => {
                     <Spinner />
                 )}
                 {!isAuthenticated && !isLoading && (
-                    <>
+                    <div className="flex gap-x-2">
                         <SignInButton mode="modal">
-                            <Button variant="ghost" size="sm">Login</Button>
+                            <Button variant="outline">Login</Button>
                         </SignInButton>
                         <SignInButton mode="modal">
-                            <Button>Get Yotion Free</Button>
+                            <Button variant="outline">Get Yotion Free</Button>
                         </SignInButton>
-                    </>
+                    </div>
                 )}
                 {isAuthenticated && !isLoading && (
                     <>

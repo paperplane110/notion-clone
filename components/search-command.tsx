@@ -28,7 +28,7 @@ export const SearchCommand = () => {
   const isOpen = useSearch((store) => store.isOpen)
 
   const onSelect = (id: string) => {
-    router.push(`/documents/${id}`)
+    router.push(`/documents/${id.split("-")[0]}`)
     onClose()
   }
 
